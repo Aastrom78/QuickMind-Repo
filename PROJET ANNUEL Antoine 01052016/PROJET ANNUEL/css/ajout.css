@@ -1,0 +1,43 @@
+/* Partie rapide */
+
+#about {
+	width: 100%;
+	color : black;
+}
+
+/* Boutons */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+.button {
+	height: 45%;
+	width: 30%;
+	background-image: url("../img/button.jpg");
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 20px;
+	text-shadow: -1px -1px 1.5px rgba(0, 0, 0, 0.6);
+	overflow: hidden;
+	box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.3), -1px 2px 20px rgba(255, 255, 255, 0.7) inset; 
+	margin: 0 0.5em 0 0.5em;
+	padding: 1em 2.35em 1em 2.35em;
+	font-size: 2.2em;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover,
+.button:hover {
+	transform: scale(1.1);
+	box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.3), -2px 2px 20px rgba(255, 255, 255, 1) inset; 
+	color: #fff !important;
+}
+
+#challenge {
+	padding-top: 8%;
+}
