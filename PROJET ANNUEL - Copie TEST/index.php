@@ -1,6 +1,6 @@
 <?php 
-    include "header.php"; 
-    include "navigation.php";   
+  //  include "header.php"; 
+  //  include "navigation.php";   
 ?>
 
     <!-- TEST -->

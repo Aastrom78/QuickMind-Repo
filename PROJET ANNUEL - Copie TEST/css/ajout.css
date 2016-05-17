@@ -102,5 +102,14 @@ select, select[option]{
     text-align:center;
 }
 
+#subscribeForm {
+    display: none;
+}
+
+#connectForm {
+    display: none;
+}
+
+
 
 

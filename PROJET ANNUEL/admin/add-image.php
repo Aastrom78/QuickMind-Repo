@@ -181,7 +181,7 @@
                     
                     Il nous faudra au total 6 requêtes : 
                             - une pour la table "medias" (title, name_category)
-                            - et quatre pour la table "tags" (*/
+                            - et quatre pour la table "tags" */
                 
                 $db = connectDb();
                 
