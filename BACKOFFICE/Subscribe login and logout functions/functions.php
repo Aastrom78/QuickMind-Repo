@@ -1,6 +1,6 @@
 <?php
 
-Function getDb() {
+function getDb() {
 
 	try {
 		
@@ -68,7 +68,9 @@ function login($pseudo, $password) {
 
 function logout () {
     
-    unset($_SESSION["accesstoken"]);
+    //unset($_SESSION["accesstoken"]);
     
-    header("location : index.php");
+    header("Location: index.php");
 }
+
+?>

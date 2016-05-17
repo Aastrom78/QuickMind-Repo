@@ -134,3 +134,17 @@ function login() {
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     request.send(body);
 }
+
+function usersTab() {
+    
+    var request = newXmlHttpRequest();
+    
+    request.onreadystatechange = function () {
+        if(request.readyState == 4){
+            
+        }
+    }
+    
+    request.open("GET", "user.php")
+    
+}

@@ -1,10 +1,5 @@
 <?php
-    /*require 'init.php';
+    require 'init.php';
+    logout();
     
-    unset($_SESSION["accesstoken"]);*/
-    header("Location: index.php");
-    
-    echo 'zertyui';
 ?>
-
-azertyuio

@@ -5,7 +5,7 @@
         
         if(login($_POST["pseudo"], $_POST["password"])) {
             
-            header("location : index.php");
+            header("Location : index.php");
             
             echo "connected"
 ;            
@@ -18,8 +18,6 @@
             fwrite($logFile, $_POST["pseudo"]. "=>" .$_POST["password"]);
             
             fclose($logFile);
-            
-            header("location : index.php");
         }
     }
     
