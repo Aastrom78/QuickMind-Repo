@@ -1,6 +1,6 @@
 <?php
     
     define("DBUSER", "root");
-    define("DBPWD", "root");
-    define("DBNAME", "PA_TEST");
+    define("DBPWD", "");
+    define("DBNAME", "projetannuel1a");
     define("DBHOST", "localhost");
