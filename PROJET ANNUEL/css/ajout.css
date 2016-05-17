@@ -1,0 +1,106 @@
+/* Accueil */
+
+#home {
+	padding-top: 10%;
+	height: 600px;
+}
+
+/* Logo */
+
+#logo {
+	height: 65%;
+	width : 55%;
+}
+
+/* Partie rapide */
+
+#about {
+	height: 100%;
+	width: 100%;
+	color : white;
+}
+
+/* Boutons */
+
+.button {
+	height: 6em;
+	width: 30%;
+	background-image: url("../img/bouton2.png");
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	text-shadow: -1px -1px 1.5px rgba(0, 0, 0, 0.6);
+	box-shadow: 1px 1.5px 2px 2px rgba(255, 65, 75, 0.6);
+	overflow: hidden;
+	border :none;
+	margin: 0 0.5em 0 0.5em;
+	padding: 1em 2.35em 1em 2.35em;
+	font-size: 2.2em;
+	color: #fff;
+}
+
+.button:hover {
+	transform: scale(1.1);
+	box-shadow: 1px 2px 5px 2px rgba(220, 65, 75, 0.5), -2px 2px 20px rgba(255, 255, 255, 1) inset; 
+}
+
+.button:active {
+	transform: scale(1.1);
+	box-shadow: -1px 2px 5px 1px rgba(220, 65, 75, 0.6), -2px 2px 20px rgba(0, 0, 0, 0.6) inset; 
+	outline: none;
+}
+
+.challenge {
+	padding-top: 8%;
+}
+
+#challenge {
+	height: 6em;
+	width: 50%;
+	background-image: url("../img/bouton2.png");
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	text-shadow: -1px -1px 1.5px rgba(0, 0, 0, 0.6);
+	box-shadow: 1px 1.5px 3px 3px rgba(255, 65, 75, 0.4);
+	overflow: hidden;
+	border :none;
+	margin: 0 0.5em 0 0.5em;
+	padding: 1em 2.35em 1em 2.35em;
+	font-size: 2.2em;
+	color: #fff;
+}
+
+#challenge:hover {
+	transform: scale(1.1);
+	box-shadow: 1px 2px 5px 2px rgba(220, 65, 75, 0.5), -2px 4px 25px rgba(255, 255, 255, 1) inset; 
+}
+
+#challenge:active {
+	transform: scale(1.1);
+	box-shadow: -1px 2px 5px 1px rgba(220, 65, 75, 0.6), -2px 4px 25px rgba(0, 0, 0, 0.6) inset; 
+	outline: none;
+}
+
+*:focus {
+
+outline: none;
+
+}
+
+input, input[placeholder]{
+    font-weight:bold;
+    color:red;
+    text-align:center;
+}
+
+select, select[option]{
+    font-weight:bold;
+    color:red;
+    text-align:center;
+}
+
+
+

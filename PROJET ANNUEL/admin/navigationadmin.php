@@ -5,8 +5,8 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <img src="img/logo.png" height="60px" alt="erreur">
+                <a class="navbar-brand page-scroll" href="index.php">
+                    <img src="../img/logo.png" height="60px" alt="erreur">Administration
                 </a>
             </div>
 
@@ -18,19 +18,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index.php">Accueil</a>
+                        <a class="page-scroll" href="../index.php">QuickMind</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="login.php">S'inscrire</a>
+                        <a class="page-scroll" href="index.php">Menu principal</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="connect.php">Se connecter</a>
+                        <a class="page-scroll" href="#previous">Précédent</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="faq.php">F.A.Q.</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="admin/index.php">Administration</a>
+                        <a class="page-scroll" href="#logout">Se déconnecter</a>
                     </li>
                 </ul>
             </div>
