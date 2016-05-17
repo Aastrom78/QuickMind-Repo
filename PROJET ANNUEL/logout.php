@@ -1,7 +1,7 @@
 <?php
-    require 'init.php';
+   /* require 'init.php';
     
-    unset($_SESSION["accesstoken"]);
-    header("location: index.php");
+    unset($_SESSION["accesstoken"]);*/
+    header("Location: index.php");
     
 ?>
