@@ -102,5 +102,16 @@ select, select[option]{
     text-align:center;
 }
 
+#connectForm, #subscribeForm{
+	display: none;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 5px;
+	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.8);
+	border-radius: 5px;
+	border-color: white;
+}
 
+#connectForm {
+	margin-right: 75px;
+}
 

@@ -62,13 +62,6 @@ function login ($pseudo, $password) {
     
 }
 
-function logout () {
-    
-    unset($_SESSION["accesstoken"]);
-    header("Location: index.php");
-    
-}
-
 function generateAccessToken ($pseudo) {
     
     $accesstoken = md5(uniqid());

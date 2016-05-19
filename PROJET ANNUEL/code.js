@@ -13,20 +13,16 @@ function subscribe() {
        var request = newXmlHttpRequest();
        
        request.onreadystatechange = function () {
-       var divPseudo = document.getElementsByClassName("subscribe_error_message")[0];
-       var divEmail = document.getElementsByClassName("subscribe_error_message")[1];
-       var divEnd = document.getElementsByClassName("subscribe_error_message");
-       divPseudo.innerHTML = "";
-       divEmail.innerHTML = "";
-
 
            if(request.readyState == 4) {
                if(request.responseText == '2') {
-                    divPseudo.innerHTML = "Pseudo déja existant";
+                    alert("Pseudo déja existant");
                } else if(request.responseText == 1){
-                    divEmail.innerHTML = "email déja existant";                                       
+                   alert("email déja existant");                                       
                }   else {
-                   divEnd[divEnd.length].innerHTML = request.responseText;
+                   alert(request.responseText);
+                   var form = document.getElementById("subscribeForm");
+                   form.style.display = "none";
                }
                            
            }
@@ -48,51 +44,57 @@ function subscribeIsVerified() {
     var password = document.getElementById("passwordSubscribe");
     var confirmPassword = document.getElementById("confirmPasswordSubscribe");
     var kind = document.getElementsByName("kind");
-    var div = document.getElementsByClassName("subscribe_error_message");
-    for(var i = 0; i < div.length; i++)
-        div[i].innerHTML = "";
     for(var i = 0; i < kind.length; i++) {
         kind[i].checked ? kind = kind[i] : undefined;
     }
     
     
     var error = false;
+    var errorMessage = "";
     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; // used for check email in js
     
     if(nickname.value.length < 1) {
         error = true;
-        div[0].innerHTML = "Votre pseudo doit contenir au moin 1 caractere";
+        errorMessage += " - Votre pseudo doit contenir au moin 1 caractere. \n";
+        nickname.style.borderColor = "red";
     }
     if (!filter.test(email.value)) {
         error = true;
-        div[1].innerHTML = "Veuillez entrer un email valide";  
+        email.style.borderColor = "red";
+        errorMessage += " - Veuillez entrer un email valide. \n";  
     }
     if(name.value.length < 1) {
         error = true;
-        div[2].innerHTML = "Veuillez entrer un nom";
+        errorMessage += " - Veuillez entrer un nom. \n";
+        name.style.borderColor = "red";
     }
     if(surname.value.length < 1) {
         error = true;
-        div[3].innerHTML = "Veuillez entrer un prénom";
+        surname.style.borderColor = "red";
+        errorMessage += " - Veuillez entrer un prénom. \n";
     }
   if(name.value == surname.value) {
         error = true;
-        div[3].innerHTML = "Le prénom doit être différent du nom";
+        surname.style.borderColor = "red";
+        errorMessage += " - Le prénom doit être différent du nom. \n";
     }
     if(password.value.length < 6 || password.length > 32) {
         error = true;
-        div[4].innerHTML = "Le mot de passe doit etre compris entre 6 et 32 caracteres";
+        password.style.borderColor = "red";
+        errorMessage += " - Le mot de passe doit etre compris entre 6 et 32 caracteres. \n";
     }
-    if(confirmPassword.value != password.value) {
+    if(confirmPassword.value != password.value || confirmPassword.value < 1) {
         error = true;
-        div[5].innerHTML = "Les mots de passe ne correspondent pas";
+        confirmPassword.style.borderColor = "red";
+        errorMessage += " - Les mots de passe ne correspondent pas. \n";
     }
     if(kind.value != "m" && kind.value != "f") {
         error = true;
-        div[6].innerHTML = kind.value;
+        errorMessage += kind.value;
     }
     
     if(error) {
+        alert(errorMessage);
         return false;
     } else {
         return true;
@@ -124,7 +126,8 @@ function login() {
     request.onreadystatechange = function () {
         
         if(request.readyState == 4) {
-           console.log(request.responseText);
+            if (request.responseText == "Pseudo ou mot de passe incorrect")
+                alert(request.responseText);
         }
     }
     

